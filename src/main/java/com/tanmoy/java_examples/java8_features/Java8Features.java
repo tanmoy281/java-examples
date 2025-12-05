@@ -11,8 +11,8 @@ public class Java8Features {
         //stream example with primitive data types
         //Example 1
         List<String> raw = List.of(
-                " xenon  ", "XENON", "  ", "ai ", "midas", "  vpg",
-                "Xenon", "Ai", "voice-mgr", "des", "DES  ", "  vpg  "
+                " ARGON  ", "argon", "  ", "ai ", "map", "  sorian",
+                "Argon", "Ai", "wifi-mgr", "MES", "mes  ", "  map  "
         );
 
         List<String> finalop=raw.stream().map(i-> i.trim()).filter(i->!i.isEmpty()).map(i->i.toUpperCase()).distinct().sorted().collect(Collectors.toList());
@@ -24,13 +24,13 @@ public class Java8Features {
                 "  Alice@example.com  ",
                 "bob@EXAMPLE.com",
                 "   ",
-                "charlie@team.telstra.com",
+                "charlie@microsoft.com",
                 "dave@telstra",
-                "eve@team.telstra.com ",
+                "eve@google.com ",
                 "alice@example.com",          // duplicate of Alice (case-insensitive after normalization)
-                "frank@tools.telstra.com ",
+                "frank@tools.gitlab.com ",
                 " invalid@email ",            // no dot after @
-                " GINA@TEAM.TELSTRA.COM "
+                " GINA@ANC.COM "
         );
         Solution solution = new Solution();
         List<String> results = emails.stream().map(i->i.trim()).filter(i->!i.isEmpty()).map(i->i.toLowerCase()).filter(i->solution.isValidEmail(i)).distinct().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
