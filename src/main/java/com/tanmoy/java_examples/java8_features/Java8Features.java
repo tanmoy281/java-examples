@@ -25,7 +25,7 @@ public class Java8Features {
                 "bob@EXAMPLE.com",
                 "   ",
                 "charlie@microsoft.com",
-                "dave@telstra",
+                "dave@abc",
                 "eve@google.com ",
                 "alice@example.com",          // duplicate of Alice (case-insensitive after normalization)
                 "frank@tools.gitlab.com ",
